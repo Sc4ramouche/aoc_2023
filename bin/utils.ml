@@ -14,3 +14,11 @@ let read_file_lines filename =
 let is_digit c =
   let code = Char.code c in
   code >= Char.code '0' && code <= Char.code '9'
+
+let unique l =
+  let rec aux l acc =
+    match l with
+    | [] -> List.rev acc
+    | h :: t -> if List.mem h acc then aux t acc else aux t (h :: acc)
+  in
+  aux l []
