@@ -10,3 +10,7 @@ let read_file_lines filename =
       List.rev acc
   in
   read_lines []
+
+let is_digit c =
+  let code = Char.code c in
+  code >= Char.code '0' && code <= Char.code '9'

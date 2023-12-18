@@ -1,9 +1,5 @@
 open Utils
 
-let is_digit c =
-  let code = Char.code c in
-  code >= Char.code '0' && code <= Char.code '9'
-
 let find_first_numeric_char str =
   let rec find_numeric_char index =
     if index >= String.length str then None
